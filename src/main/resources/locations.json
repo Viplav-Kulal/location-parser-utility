@@ -1,0 +1,67 @@
+[
+  {
+    "country": "India",
+    "states": [
+      {
+        "state": "Maharashtra",
+        "cities": ["Mumbai", "Pune", "Nagpur"]
+      },
+      {
+        "state": "Karnataka",
+        "cities": ["Bengaluru", "Mysuru"]
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "states": [
+      {
+        "state": "California",
+        "cities": ["Los Angeles", "San Francisco"]
+      },
+      {
+        "state": "Texas",
+        "cities": ["Houston", "Dallas"]
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "states": [
+      {
+        "state": "Bavaria",
+        "cities": ["Munich", "Nuremberg"]
+      },
+      {
+        "state": "Hesse",
+        "cities": ["Frankfurt", "Wiesbaden"]
+      }
+    ]
+  },
+  {
+    "country": "Australia",
+    "states": [
+      {
+        "state": "New South Wales",
+        "cities": ["Sydney", "Newcastle"]
+      },
+      {
+        "state": "Victoria",
+        "cities": ["Melbourne", "Geelong"]
+      }
+    ]
+  },
+  {
+    "country": "Canada",
+    "states": [
+      {
+        "state": "Ontario",
+        "cities": ["Toronto", "Ottawa"]
+      },
+      {
+        "state": "British Columbia",
+        "cities": ["Vancouver", "Victoria"]
+      }
+    ]
+  }
+]
