@@ -11,7 +11,8 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 public class ParserUtils implements IBaseInterface {
-
+	
+	private static final Logger logger = (Logger) LogManager.getLogger(ParserUtils.class);
 	private static JsonPath jsonPath;
 	// Created a static and initialzed it in the static block instead of
 	// constructor, So that it will be initialised once only and can be used across
@@ -22,12 +23,10 @@ public class ParserUtils implements IBaseInterface {
 			String jsonContent = new String(Files.readAllBytes(Paths.get(IBaseInterface.LOCATIONS_JSON_PATH)));
 			jsonPath = new JsonPath(jsonContent);
 		} catch (IOException e) {
-			System.out.println("Failed to read or parse the JSON file");
+			logger.error("Failed to read or parse the JSON file");
 			e.printStackTrace();
 		}
 	}
-
-	private static final Logger logger = (Logger) LogManager.getLogger(ParserUtils.class);
 
 	@SuppressWarnings("unchecked") // Added because we are casting json object to a List<Map> object
 	public static List<String> getCities(String country, String state) {

@@ -7,9 +7,11 @@ import java.util.Calendar;
 public interface IBaseInterface {
 	public static final String PROJECT_PATH = new File("").getAbsolutePath();
 	public static final String RESOURCE_PATH = new File("").getAbsolutePath() + "/src/main/resources";
-	public final static String LOCATIONS_JSON_PATH = "./src/main/resources/locations.json";
+	public final static String LOCATIONS_JSON_PATH = RESOURCE_PATH + "/locations.json";
+
 	// Can add other generic paths to other files like screenshots, loggers and test
 	// regression suites using above
-	
-	// Have defined these as final so these cannot be changed at any point during execution.
+
+	// Have defined these as final so these cannot be changed at any point during
+	// execution.
 }
