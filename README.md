@@ -7,6 +7,10 @@ This utility provides methods to parse a hierarchical location JSON file contain
 - Logging using Log4j2
 - TestNG-based parameterized test cases
 
+The JSON structure is nested and hierarchical (countries → states → cities), and we need to search/filter inside those nested arrays, it’s simpler and more flexible to get the whole list as Java objects (List<Map<>>) and then iterate/filter.
+JsonPath lets you extract nodes by simple paths (like $.countries[0].states[0].cities), but in this case, you need to dynamically find the country and state objects that match input parameters (country name, state name, city name). This is why, in the logic, explicit looping is done instead of simple JsonKey access.
+
+
 ##  Project Structure
 
 <pre> 
