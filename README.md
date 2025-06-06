@@ -1,6 +1,11 @@
 # Location Parser Utility
 
-This utility provides methods to parse a hierarchical location JSON file containing countries, states, and cities. It allows querying cities by country and state, and reverse lookup of country and state by city name.
+This utility provides methods to parse a hierarchical location JSON file containing countries, states, and cities. It allows querying cities by country and state, and reverse lookup of country and state by city name. The project includes :
+
+- A reusable utility class (`ParserUtils`)
+- Centralized path management via an interface (`IBaseInterface`)
+- Logging using Log4j2
+- TestNG-based parameterized test cases
 
 ##  Project Structure
 
@@ -19,6 +24,24 @@ LocationParser/
 ├── pom.xml
 └── README.md
 </pre>
+
+##  Design Highlights (from Code Comments)
+
+###  Static JSON Initialization
+
+- `ParserUtils` loads and parses the JSON only **once** using a `static` block.
+- This ensures the JSON is read once and remains available application-wide, improving performance and resource usage.
+
+## Path Centralization
+ - IBaseInterface defines constants to manage commonly used paths like the project root and the JSON file location.
+ - Using constants keeps file path logic centralized and consistent across the project.
+
+## Exception Handling & Logging
+- Errors during JSON parsing or data lookup are caught and logged using Log4j2.
+- This avoids hard crashes and ensures traceability through console or log files.
+- If no matching data is found, the methods return Collections.emptyList() or "Not Found" instead of null.
+- This makes error handling easier and avoids NullPointerException.
+
 
 ## Features
 
