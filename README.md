@@ -77,4 +77,7 @@ Build the project using:
 Run tests using:
 <pre> mvn clean test </pre>
 
+![Repo Views](https://komarev.com/ghpvc/?username=yourusername&repo=your-repo&color=blue)
+
+
 
