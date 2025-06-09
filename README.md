@@ -77,7 +77,8 @@ Build the project using:
 Run tests using:
 <pre> mvn clean test </pre>
 
-![Repo Views](https://komarev.com/ghpvc/?username=Viplav-kulal&repo=https://github.com/Viplav-Kulal/location-parser-utility.git&color=blue)
+
+![Repo Views](https://komarev.com/ghpvc/?username=Viplav-Kulal&repo=location-parser-utility&color=blue)
 
 
 
